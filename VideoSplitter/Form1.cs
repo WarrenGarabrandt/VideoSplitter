@@ -161,9 +161,37 @@ namespace VideoSplitter
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("REM This script will split up the files into the selected chapters");
             int segCount = 0;
+            string folder = txtExportDirectory.Text;
+            bool folderPrefix = true;
+            if (string.IsNullOrEmpty(txtExportDirectory.Text))
+            {
+                folderPrefix = false;
+            }
+            string[] segmentNames = txtSegmentNames.Lines;
+            bool useSegmentNames = true;
+            if (string.IsNullOrEmpty(txtSegmentNames.Text))
+            {
+                useSegmentNames = false;
+            }
+            bool simultaneous = runSimultaneouslyToolStripMenuItem.Checked;
+            bool allStreams = preserveAllStreamsToolStripMenuItem.Checked;
             foreach (Segment seg in msTimes)
             {
-                sb.AppendFormat("ffmpeg -i \"{0}\" -ss {1} -t {2} -c copy -map 0 -reset_timestamps 1 \"segment {3}.mkv\"\r\n", OpenFile, seg.StartTimeSeconds, seg.DurationSeconds, segCount);
+                string outputName;
+                if (useSegmentNames && segmentNames.Length > segCount)
+                {
+                    outputName = string.Format("{0}.mkv", segmentNames[segCount]);
+                }
+                else
+                {
+                    outputName = string.Format("segment {0}.mkv", segCount);
+                }
+                if (folderPrefix)
+                {
+                    outputName = System.IO.Path.Combine(folder, outputName);
+                }
+                sb.AppendFormat("{0}ffmpeg -i \"{1}\" -ss {2} -t {3} -c copy {4}-reset_timestamps 1 \"{5}\"\r\n", 
+                    (simultaneous ? "start " : ""), OpenFile, seg.StartTimeSeconds, seg.DurationSeconds, (allStreams ? "-map 0 " : ""), outputName);
                 segCount++;
             }
             using (SaveFileDialog sfd = new SaveFileDialog())
@@ -200,6 +228,27 @@ namespace VideoSplitter
         private void instructionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Open a video, and the chapter points will be listed.\r\nCheck the box next to each chapter point where a split should be made.\r\nThen Export the Batch file and run it externally.");
+        }
+
+        private void cmdBrowse_Click(object sender, EventArgs e)
+        {
+            using (FolderBrowserDialog fbd = new FolderBrowserDialog())
+            {
+                if (fbd.ShowDialog() == DialogResult.OK)
+                {
+                    txtExportDirectory.Text = fbd.SelectedPath;
+                }
+            }
+        }
+
+        private void runSimultaneouslyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            runSimultaneouslyToolStripMenuItem.Checked = !runSimultaneouslyToolStripMenuItem.Checked;
+        }
+
+        private void preserveAllStreamsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            preserveAllStreamsToolStripMenuItem.Checked = !preserveAllStreamsToolStripMenuItem.Checked;
         }
     }
 }
