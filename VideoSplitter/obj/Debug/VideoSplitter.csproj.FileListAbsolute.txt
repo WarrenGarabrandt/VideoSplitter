@@ -6,7 +6,6 @@ C:\Users\wmgar\source\repos\VideoSplitter\VideoSplitter\bin\Debug\LibVLCSharp.Wi
 C:\Users\wmgar\source\repos\VideoSplitter\VideoSplitter\obj\Debug\VideoSplitter.csprojAssemblyReference.cache
 C:\Users\wmgar\source\repos\VideoSplitter\VideoSplitter\obj\Debug\VideoSplitter.Properties.Resources.resources
 C:\Users\wmgar\source\repos\VideoSplitter\VideoSplitter\obj\Debug\VideoSplitter.csproj.GenerateResource.cache
-C:\Users\wmgar\source\repos\VideoSplitter\VideoSplitter\obj\Debug\VideoSplitter.csproj.CoreCompileInputs.cache
 C:\Users\wmgar\source\repos\VideoSplitter\VideoSplitter\obj\Debug\VideoSplitter.csproj.CopyComplete
 C:\Users\wmgar\source\repos\VideoSplitter\VideoSplitter\obj\Debug\VideoSplitter.exe
 C:\Users\wmgar\source\repos\VideoSplitter\VideoSplitter\obj\Debug\VideoSplitter.pdb

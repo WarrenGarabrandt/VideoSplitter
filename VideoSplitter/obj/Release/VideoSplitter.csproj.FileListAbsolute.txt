@@ -1123,7 +1123,6 @@ C:\Users\wmgar\source\repos\VideoSplitter\VideoSplitter\obj\Release\VideoSplitte
 C:\Users\wmgar\source\repos\VideoSplitter\VideoSplitter\obj\Release\VideoSplitter.Form1.resources
 C:\Users\wmgar\source\repos\VideoSplitter\VideoSplitter\obj\Release\VideoSplitter.Properties.Resources.resources
 C:\Users\wmgar\source\repos\VideoSplitter\VideoSplitter\obj\Release\VideoSplitter.csproj.GenerateResource.cache
-C:\Users\wmgar\source\repos\VideoSplitter\VideoSplitter\obj\Release\VideoSplitter.csproj.CoreCompileInputs.cache
 C:\Users\wmgar\source\repos\VideoSplitter\VideoSplitter\obj\Release\VideoSplitter.csproj.CopyComplete
 C:\Users\wmgar\source\repos\VideoSplitter\VideoSplitter\obj\Release\VideoSplitter.exe
 C:\Users\wmgar\source\repos\VideoSplitter\VideoSplitter\obj\Release\VideoSplitter.pdb

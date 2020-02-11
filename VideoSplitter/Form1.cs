@@ -163,7 +163,7 @@ namespace VideoSplitter
             int segCount = 0;
             foreach (Segment seg in msTimes)
             {
-                sb.AppendFormat("ffmpeg -i \"{0}\" -ss {1} -t {2} -c copy -reset_timestamps 1 \"segment {3}.mkv\"\r\n", OpenFile, seg.StartTimeSeconds, seg.DurationSeconds, segCount);
+                sb.AppendFormat("ffmpeg -i \"{0}\" -ss {1} -t {2} -c copy -map 0 -reset_timestamps 1 \"segment {3}.mkv\"\r\n", OpenFile, seg.StartTimeSeconds, seg.DurationSeconds, segCount);
                 segCount++;
             }
             using (SaveFileDialog sfd = new SaveFileDialog())
@@ -183,6 +183,23 @@ namespace VideoSplitter
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             _mp.Stop();
+        }
+
+        private void cmdPlayPause_Click(object sender, EventArgs e)
+        {
+            if (_mp.State == VLCState.Playing)
+            {
+                _mp.Pause();
+            }
+            else if (_mp.State == VLCState.Paused)
+            {
+                _mp.Play();
+            }
+        }
+
+        private void instructionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Open a video, and the chapter points will be listed.\r\nCheck the box next to each chapter point where a split should be made.\r\nThen Export the Batch file and run it externally.");
         }
     }
 }
