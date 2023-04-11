@@ -2,31 +2,110 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
-      "LibVLCSharp/3.2.0": {
-        "type": "package",
-        "compile": {
-          "lib/net471/LibVLCSharp.dll": {}
-        },
-        "runtime": {
-          "lib/net471/LibVLCSharp.dll": {}
-        }
-      },
-      "LibVLCSharp.WinForms/3.2.0": {
+      "LibVLCSharp/3.7.0": {
         "type": "package",
         "dependencies": {
-          "LibVLCSharp": "3.2.0"
+          "System.Memory": "4.5.4"
         },
-        "frameworkAssemblies": [
-          "System.Windows.Forms"
-        ],
         "compile": {
-          "lib/net40/LibVLCSharp.WinForms.dll": {}
+          "lib/net471/LibVLCSharp.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net40/LibVLCSharp.WinForms.dll": {}
+          "lib/net471/LibVLCSharp.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "VideoLAN.LibVLC.Windows/3.0.8": {
+      "LibVLCSharp.WinForms/3.7.0": {
+        "type": "package",
+        "dependencies": {
+          "LibVLCSharp": "3.7.0"
+        },
+        "compile": {
+          "lib/net40/LibVLCSharp.WinForms.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net40/LibVLCSharp.WinForms.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net45/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Memory/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.3": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "VideoLAN.LibVLC.Windows/3.0.18": {
         "type": "package",
         "build": {
           "build/VideoLAN.LibVLC.Windows.targets": {}
@@ -34,31 +113,110 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win": {
-      "LibVLCSharp/3.2.0": {
-        "type": "package",
-        "compile": {
-          "lib/net471/LibVLCSharp.dll": {}
-        },
-        "runtime": {
-          "lib/net471/LibVLCSharp.dll": {}
-        }
-      },
-      "LibVLCSharp.WinForms/3.2.0": {
+      "LibVLCSharp/3.7.0": {
         "type": "package",
         "dependencies": {
-          "LibVLCSharp": "3.2.0"
+          "System.Memory": "4.5.4"
         },
-        "frameworkAssemblies": [
-          "System.Windows.Forms"
-        ],
         "compile": {
-          "lib/net40/LibVLCSharp.WinForms.dll": {}
+          "lib/net471/LibVLCSharp.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net40/LibVLCSharp.WinForms.dll": {}
+          "lib/net471/LibVLCSharp.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "VideoLAN.LibVLC.Windows/3.0.8": {
+      "LibVLCSharp.WinForms/3.7.0": {
+        "type": "package",
+        "dependencies": {
+          "LibVLCSharp": "3.7.0"
+        },
+        "compile": {
+          "lib/net40/LibVLCSharp.WinForms.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net40/LibVLCSharp.WinForms.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net45/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Memory/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.3": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "VideoLAN.LibVLC.Windows/3.0.18": {
         "type": "package",
         "build": {
           "build/VideoLAN.LibVLC.Windows.targets": {}
@@ -66,31 +224,110 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x64": {
-      "LibVLCSharp/3.2.0": {
-        "type": "package",
-        "compile": {
-          "lib/net471/LibVLCSharp.dll": {}
-        },
-        "runtime": {
-          "lib/net471/LibVLCSharp.dll": {}
-        }
-      },
-      "LibVLCSharp.WinForms/3.2.0": {
+      "LibVLCSharp/3.7.0": {
         "type": "package",
         "dependencies": {
-          "LibVLCSharp": "3.2.0"
+          "System.Memory": "4.5.4"
         },
-        "frameworkAssemblies": [
-          "System.Windows.Forms"
-        ],
         "compile": {
-          "lib/net40/LibVLCSharp.WinForms.dll": {}
+          "lib/net471/LibVLCSharp.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net40/LibVLCSharp.WinForms.dll": {}
+          "lib/net471/LibVLCSharp.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "VideoLAN.LibVLC.Windows/3.0.8": {
+      "LibVLCSharp.WinForms/3.7.0": {
+        "type": "package",
+        "dependencies": {
+          "LibVLCSharp": "3.7.0"
+        },
+        "compile": {
+          "lib/net40/LibVLCSharp.WinForms.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net40/LibVLCSharp.WinForms.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net45/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Memory/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.3": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "VideoLAN.LibVLC.Windows/3.0.18": {
         "type": "package",
         "build": {
           "build/VideoLAN.LibVLC.Windows.targets": {}
@@ -98,31 +335,110 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x86": {
-      "LibVLCSharp/3.2.0": {
-        "type": "package",
-        "compile": {
-          "lib/net471/LibVLCSharp.dll": {}
-        },
-        "runtime": {
-          "lib/net471/LibVLCSharp.dll": {}
-        }
-      },
-      "LibVLCSharp.WinForms/3.2.0": {
+      "LibVLCSharp/3.7.0": {
         "type": "package",
         "dependencies": {
-          "LibVLCSharp": "3.2.0"
+          "System.Memory": "4.5.4"
         },
-        "frameworkAssemblies": [
-          "System.Windows.Forms"
-        ],
         "compile": {
-          "lib/net40/LibVLCSharp.WinForms.dll": {}
+          "lib/net471/LibVLCSharp.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net40/LibVLCSharp.WinForms.dll": {}
+          "lib/net471/LibVLCSharp.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "VideoLAN.LibVLC.Windows/3.0.8": {
+      "LibVLCSharp.WinForms/3.7.0": {
+        "type": "package",
+        "dependencies": {
+          "LibVLCSharp": "3.7.0"
+        },
+        "compile": {
+          "lib/net40/LibVLCSharp.WinForms.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net40/LibVLCSharp.WinForms.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net45/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Memory/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.3": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "VideoLAN.LibVLC.Windows/3.0.18": {
         "type": "package",
         "build": {
           "build/VideoLAN.LibVLC.Windows.targets": {}
@@ -131,13 +447,15 @@
     }
   },
   "libraries": {
-    "LibVLCSharp/3.2.0": {
-      "sha512": "/WSADY8oUmWboSOWdjaxSvChyGmHTT/h8rMjIMxz0bb7fsr/i6n1vLrVJN3XGyvueOYcs+FGczq3i9ralEPjpA==",
+    "LibVLCSharp/3.7.0": {
+      "sha512": "N9NV+BamKr+1YiRktX9JroE4m9C+pEszUNW4qa3A5mychhCWBvvoDolZKWk2yxhZvHewgaXXahBcw5ivCXjKYA==",
       "type": "package",
-      "path": "libvlcsharp/3.2.0",
+      "path": "libvlcsharp/3.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "README.md",
+        "icon.png",
         "lib/monoandroid81/LibVLCSharp.Android.AWindow.dll",
         "lib/monoandroid81/LibVLCSharp.dll",
         "lib/monoandroid81/LibVLCSharp.xml",
@@ -145,43 +463,191 @@
         "lib/net40/LibVLCSharp.xml",
         "lib/net471/LibVLCSharp.dll",
         "lib/net471/LibVLCSharp.xml",
+        "lib/net6.0-android31.0/LibVLCSharp.Android.AWindow.dll",
+        "lib/net6.0-android31.0/LibVLCSharp.dll",
+        "lib/net6.0-android31.0/LibVLCSharp.xml",
+        "lib/net6.0-ios16.1/LibVLCSharp.dll",
+        "lib/net6.0-ios16.1/LibVLCSharp.xml",
+        "lib/net6.0-macos13.0/LibVLCSharp.dll",
+        "lib/net6.0-macos13.0/LibVLCSharp.xml",
+        "lib/net6.0-tvos16.1/LibVLCSharp.dll",
+        "lib/net6.0-tvos16.1/LibVLCSharp.xml",
+        "lib/net6.0-windows10.0.17763/LibVLCSharp.dll",
+        "lib/net6.0-windows10.0.17763/LibVLCSharp.pri",
+        "lib/net6.0-windows10.0.17763/LibVLCSharp.xml",
+        "lib/net6.0/LibVLCSharp.dll",
+        "lib/net6.0/LibVLCSharp.xml",
         "lib/netstandard1.1/LibVLCSharp.dll",
         "lib/netstandard1.1/LibVLCSharp.xml",
         "lib/netstandard2.0/LibVLCSharp.dll",
         "lib/netstandard2.0/LibVLCSharp.xml",
-        "lib/uap10.0.16299/LibVLCSharp.dll",
-        "lib/uap10.0.16299/LibVLCSharp.pri",
-        "lib/uap10.0.16299/LibVLCSharp.xml",
-        "lib/uap10.0/LibVLCSharp.dll",
-        "lib/uap10.0/LibVLCSharp.pri",
-        "lib/uap10.0/LibVLCSharp.xml",
+        "lib/netstandard2.1/LibVLCSharp.dll",
+        "lib/netstandard2.1/LibVLCSharp.xml",
+        "lib/uap10.0.18362/LibVLCSharp.dll",
+        "lib/uap10.0.18362/LibVLCSharp.pri",
+        "lib/uap10.0.18362/LibVLCSharp.xml",
+        "lib/uap10.0.18362/LibVLCSharp/LibVLCSharp.xr.xml",
         "lib/xamarinios10/LibVLCSharp.dll",
         "lib/xamarinios10/LibVLCSharp.xml",
         "lib/xamarinmac20/LibVLCSharp.dll",
         "lib/xamarinmac20/LibVLCSharp.xml",
-        "lib/xamarintvos10/LibVLCSharp.dll",
-        "lib/xamarintvos10/LibVLCSharp.xml",
-        "libvlcsharp.3.2.0.nupkg.sha512",
+        "libvlcsharp.3.7.0.nupkg.sha512",
         "libvlcsharp.nuspec"
       ]
     },
-    "LibVLCSharp.WinForms/3.2.0": {
-      "sha512": "E64W0PuDDIUBHiVH0Z/zf+czqK+lbL6q0Xj9ND/oJtN2Qqa2A39zeacehlp8gvHBCU+btuv019YaVNVQhTW2Ig==",
+    "LibVLCSharp.WinForms/3.7.0": {
+      "sha512": "wFFjP7qt59UpTdVInQSbwJyAmzCWQ0ilT8ZmkQ1Vf2NCT0yfAKDr9i10+Pyt71cBn3Plcd0nAEhrA+EeMuiSsA==",
       "type": "package",
-      "path": "libvlcsharp.winforms/3.2.0",
+      "path": "libvlcsharp.winforms/3.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "README.md",
+        "icon.png",
         "lib/net40/LibVLCSharp.WinForms.dll",
         "lib/net40/LibVLCSharp.WinForms.xml",
-        "libvlcsharp.winforms.3.2.0.nupkg.sha512",
+        "lib/net6.0-windows7.0/LibVLCSharp.WinForms.dll",
+        "lib/net6.0-windows7.0/LibVLCSharp.WinForms.xml",
+        "lib/netcoreapp3.1/LibVLCSharp.WinForms.dll",
+        "lib/netcoreapp3.1/LibVLCSharp.WinForms.xml",
+        "libvlcsharp.winforms.3.7.0.nupkg.sha512",
         "libvlcsharp.winforms.nuspec"
       ]
     },
-    "VideoLAN.LibVLC.Windows/3.0.8": {
-      "sha512": "f5HA+fS4J2G+sc/j6TjPnpuEhCvMuygq64RkRx5xbNyRFuVCG7r9dPIO8gedNQnITm4/QzzkuR05/4J1bjIpMA==",
+    "System.Buffers/4.5.1": {
+      "sha512": "Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
       "type": "package",
-      "path": "videolan.libvlc.windows/3.0.8",
+      "path": "system.buffers/4.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Buffers.dll",
+        "lib/net461/System.Buffers.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Buffers.dll",
+        "lib/netstandard1.1/System.Buffers.xml",
+        "lib/netstandard2.0/System.Buffers.dll",
+        "lib/netstandard2.0/System.Buffers.xml",
+        "lib/uap10.0.16299/_._",
+        "ref/net45/System.Buffers.dll",
+        "ref/net45/System.Buffers.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Buffers.dll",
+        "ref/netstandard1.1/System.Buffers.xml",
+        "ref/netstandard2.0/System.Buffers.dll",
+        "ref/netstandard2.0/System.Buffers.xml",
+        "ref/uap10.0.16299/_._",
+        "system.buffers.4.5.1.nupkg.sha512",
+        "system.buffers.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Memory/4.5.4": {
+      "sha512": "1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+      "type": "package",
+      "path": "system.memory/4.5.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Memory.dll",
+        "lib/net461/System.Memory.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "system.memory.4.5.4.nupkg.sha512",
+        "system.memory.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "type": "package",
+      "path": "system.numerics.vectors/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Numerics.Vectors.dll",
+        "lib/net46/System.Numerics.Vectors.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.Numerics.Vectors.dll",
+        "lib/netstandard1.0/System.Numerics.Vectors.xml",
+        "lib/netstandard2.0/System.Numerics.Vectors.dll",
+        "lib/netstandard2.0/System.Numerics.Vectors.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/System.Numerics.Vectors.dll",
+        "ref/net45/System.Numerics.Vectors.xml",
+        "ref/net46/System.Numerics.Vectors.dll",
+        "ref/net46/System.Numerics.Vectors.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/System.Numerics.Vectors.dll",
+        "ref/netstandard1.0/System.Numerics.Vectors.xml",
+        "ref/netstandard2.0/System.Numerics.Vectors.dll",
+        "ref/netstandard2.0/System.Numerics.Vectors.xml",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.numerics.vectors.4.5.0.nupkg.sha512",
+        "system.numerics.vectors.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.3": {
+      "sha512": "3TIsJhD1EiiT0w2CcDMN/iSSwnNnsrnbzeVHSKkaEgV85txMprmuO+Yq2AdSbeVGcg28pdNDTPK87tJhX7VFHw==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/4.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/net461/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "VideoLAN.LibVLC.Windows/3.0.18": {
+      "sha512": "A7Fg86aSziadDxB4F8AWN6kHNgEYJqerdPG9SflPM0GDO9m/O2jnc60mfSa52xOh5EC4U62W0y4kdyw+FgB2iQ==",
+      "type": "package",
+      "path": "videolan.libvlc.windows/3.0.18",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -487,8 +953,8 @@
         "build/x64/plugins/access/libaccess_srt_plugin.dll",
         "build/x64/plugins/access/libaccess_wasapi_plugin.dll",
         "build/x64/plugins/access/libattachment_plugin.dll",
-        "build/x64/plugins/access/libbluray-awt-j2se-1.1.2.jar",
-        "build/x64/plugins/access/libbluray-j2se-1.1.2.jar",
+        "build/x64/plugins/access/libbluray-awt-j2se-1.3.2.jar",
+        "build/x64/plugins/access/libbluray-j2se-1.3.2.jar",
         "build/x64/plugins/access/libcdda_plugin.dll",
         "build/x64/plugins/access/libdcp_plugin.dll",
         "build/x64/plugins/access/libdshow_plugin.dll",
@@ -504,6 +970,7 @@
         "build/x64/plugins/access/liblibbluray_plugin.dll",
         "build/x64/plugins/access/liblive555_plugin.dll",
         "build/x64/plugins/access/libnfs_plugin.dll",
+        "build/x64/plugins/access/librist_plugin.dll",
         "build/x64/plugins/access/librtp_plugin.dll",
         "build/x64/plugins/access/libsatip_plugin.dll",
         "build/x64/plugins/access/libscreen_plugin.dll",
@@ -521,6 +988,7 @@
         "build/x64/plugins/access_output/libaccess_output_file_plugin.dll",
         "build/x64/plugins/access_output/libaccess_output_http_plugin.dll",
         "build/x64/plugins/access_output/libaccess_output_livehttp_plugin.dll",
+        "build/x64/plugins/access_output/libaccess_output_rist_plugin.dll",
         "build/x64/plugins/access_output/libaccess_output_shout_plugin.dll",
         "build/x64/plugins/access_output/libaccess_output_srt_plugin.dll",
         "build/x64/plugins/access_output/libaccess_output_udp_plugin.dll",
@@ -1147,8 +1615,8 @@
         "build/x86/plugins/access/libaccess_srt_plugin.dll",
         "build/x86/plugins/access/libaccess_wasapi_plugin.dll",
         "build/x86/plugins/access/libattachment_plugin.dll",
-        "build/x86/plugins/access/libbluray-awt-j2se-1.1.2.jar",
-        "build/x86/plugins/access/libbluray-j2se-1.1.2.jar",
+        "build/x86/plugins/access/libbluray-awt-j2se-1.3.2.jar",
+        "build/x86/plugins/access/libbluray-j2se-1.3.2.jar",
         "build/x86/plugins/access/libcdda_plugin.dll",
         "build/x86/plugins/access/libdcp_plugin.dll",
         "build/x86/plugins/access/libdshow_plugin.dll",
@@ -1164,6 +1632,7 @@
         "build/x86/plugins/access/liblibbluray_plugin.dll",
         "build/x86/plugins/access/liblive555_plugin.dll",
         "build/x86/plugins/access/libnfs_plugin.dll",
+        "build/x86/plugins/access/librist_plugin.dll",
         "build/x86/plugins/access/librtp_plugin.dll",
         "build/x86/plugins/access/libsatip_plugin.dll",
         "build/x86/plugins/access/libscreen_plugin.dll",
@@ -1181,6 +1650,7 @@
         "build/x86/plugins/access_output/libaccess_output_file_plugin.dll",
         "build/x86/plugins/access_output/libaccess_output_http_plugin.dll",
         "build/x86/plugins/access_output/libaccess_output_livehttp_plugin.dll",
+        "build/x86/plugins/access_output/libaccess_output_rist_plugin.dll",
         "build/x86/plugins/access_output/libaccess_output_shout_plugin.dll",
         "build/x86/plugins/access_output/libaccess_output_srt_plugin.dll",
         "build/x86/plugins/access_output/libaccess_output_udp_plugin.dll",
@@ -1506,37 +1976,33 @@
         "build/x86/plugins/visualization/libvisual_plugin.dll",
         "build/x86/vlc.lib",
         "build/x86/vlccore.lib",
-        "videolan.libvlc.windows.3.0.8.nupkg.sha512",
+        "icon.png",
+        "videolan.libvlc.windows.3.0.18.nupkg.sha512",
         "videolan.libvlc.windows.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
-      "LibVLCSharp.WinForms >= 3.2.0",
-      "VideoLAN.LibVLC.Windows >= 3.0.8"
+      "LibVLCSharp.WinForms >= 3.7.0",
+      "VideoLAN.LibVLC.Windows >= 3.0.18"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\wmgar\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\wmgar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wmgar\\source\\repos\\VideoSplitter\\VideoSplitter\\VideoSplitter.csproj",
+      "projectUniqueName": "C:\\Users\\wmgar\\OneDrive\\Source\\VideoSplitter\\VideoSplitter\\VideoSplitter.csproj",
       "projectName": "VideoSplitter",
-      "projectPath": "C:\\Users\\wmgar\\source\\repos\\VideoSplitter\\VideoSplitter\\VideoSplitter.csproj",
+      "projectPath": "C:\\Users\\wmgar\\OneDrive\\Source\\VideoSplitter\\VideoSplitter\\VideoSplitter.csproj",
       "packagesPath": "C:\\Users\\wmgar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wmgar\\source\\repos\\VideoSplitter\\VideoSplitter\\obj\\",
+      "outputPath": "C:\\Users\\wmgar\\OneDrive\\Source\\VideoSplitter\\VideoSplitter\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\wmgar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1557,11 +2023,11 @@
         "dependencies": {
           "LibVLCSharp.WinForms": {
             "target": "Package",
-            "version": "[3.2.0, )"
+            "version": "[3.7.0, )"
           },
           "VideoLAN.LibVLC.Windows": {
             "target": "Package",
-            "version": "[3.0.8, )"
+            "version": "[3.0.18, )"
           }
         }
       }
